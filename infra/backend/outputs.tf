@@ -1,6 +1,6 @@
-
 output "bucket_name" {
-  value = aws_s3_bucket.state.id
+  value      = local.bucket_name
+  depends_on = [terraform_data.state_bucket]
 }
 
 output "lock_table" {
